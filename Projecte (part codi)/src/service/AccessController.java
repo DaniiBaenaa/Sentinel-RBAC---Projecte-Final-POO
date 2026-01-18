@@ -36,3 +36,14 @@ public class AccessController {
 
         return false;
     }
+
+    public boolean checkPolicies(AccessRequest peticio, String ip) {
+        for (SecurityPolicy p : politiques) {
+            boolean ok = p.evaluate(peticio, ip);
+            if (!ok) {
+                return false;
+            }
+        }
+        return true;
+    }
+}
