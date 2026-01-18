@@ -29,12 +29,12 @@ public class AuditLogger {
 
     public void logAccess(AccessRequest peticio, String ip, boolean rolOk, boolean politiquesOk) {
         String linia = "[ACCESS] usuari=" + peticio.getRequestor().getUsername()
-                + " rol=" + peticio.getRequestor().getRole()
-                + " recurs=" + peticio.getTarget().getResourceId()
-                + " ip=" + ip
-                + " rolOk=" + rolOk
-                + " politiquesOk=" + politiquesOk
-                + " estat=" + peticio.getStatus()
+                + " rol =" + peticio.getRequestor().getRole()
+                + " recurs =" + peticio.getTarget().getResourceId()
+                + " ip =" + ip
+                + " rolOk =" + rolOk
+                + " politiquesOk =" + politiquesOk
+                + " estat =" + peticio.getStatus()
                 + "\n";
 
         afegirLinia(linia);
