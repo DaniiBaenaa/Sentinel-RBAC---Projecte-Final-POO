@@ -39,3 +39,26 @@ Ho tenim organitzat així:
 * service: Eines extra com el Log o el verificador de contrasenyes.
 * view: Els menús de la consola.
 
+## 4. Funcionalitats principals
+
+1.  Login: Et demana usuari i contrasenya i comprova el hash.
+2.  Rols:
+    * L'Admin ho pot veure tot.
+    * L'Employee veu coses públiques i internes.
+    * El Guest només veu coses públiques.
+3.  Control d'IP: Encara que tinguis permís, si la teva IP no és de la llista (com `127.0.0.1`), no entres.
+4.  Logs: Tot queda escrit al fitxer `audit.log` automàticament.
+5.  Veure el Log: Si ets admin, pots llegir el log directament des de la consola sense obrir el fitxer.
+
+## 5. Ús d’IA (Detall)
+
+Com dèiem al principi, hem fet servir la IA com a suport quan ens quedàvem encallats. Concretament:
+* Solucionar errors: Quan sortia una excepció rara amb els fitxers (`AuditLogger`), la IA ens va ajudar a veure on fallava.
+* Revisió: Ens ha anat bé per confirmar que estàvem aplicant bé la lògica dels rols.
+
+## 6. Limitacions i millores futures
+
+Sabem que el projecte té algunes coses a millorar:
+* No hi ha Base de Dades: Si tanques el programa, es perden els canvis (tot està en memòria). Caldria posar un MySQL.
+* La IP és simulada: Com que ho executem en local, et demanem que escriguis la IP a mà per provar si funciona el bloqueig. En la vida real això s'hauria de detectar sol.
+* Gestió d'usuaris: No pots crear usuaris nous des del menú, estan fixos al codi. Estaria bé poder fer un "Sign up".
