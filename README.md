@@ -17,7 +17,7 @@ El Visual Studio Code
 
 ### b. Passos bàsics
 1.  Obre el projecte i assegura't que les carpetes estan com al repositori.
-2. Executa
+2. Executa amb el main
 3.  Per provar-ho, pots fer servir aquests usuaris que ja estan programats:
     * Admin: usuari `admin` / contrasenya `admin123`
     * Empleat: usuari `employee` / contrasenya `employee123`
@@ -38,3 +38,4 @@ Ho tenim organitzat així:
 * policy: Les regles de seguretat (com la de revisar la IP).
 * service: Eines extra com el Log o el verificador de contrasenyes.
 * view: Els menús de la consola.
+
